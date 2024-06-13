@@ -1,0 +1,12 @@
+---
+import Layout from "../Layout/Layout.astro";
+const { class: classList } = Astro.props;
+
+import Navbar from "@/sections/navbar.astro";
+import Hero from "@/sections/hero.astro";
+---
+
+<Layout>
+  <Navbar class="px-12" />
+  <Hero />
+</Layout>

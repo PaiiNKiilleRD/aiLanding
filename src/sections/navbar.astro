@@ -1,0 +1,48 @@
+---
+const links = [
+  {
+    text: "Home",
+    path: "/",
+  },
+  {
+    text: "AI chat",
+    path: "/",
+  },
+  {
+    text: "AI Image Generator",
+    path: "/",
+  },
+  {
+    text: "AI Video",
+    path: "/",
+  },
+  {
+    text: "Text to Speech",
+    path: "/",
+  },
+];
+---
+
+<nav
+  class:list={[
+    "flex  fixed top-0 right-0 w-full items-center justify-between h-20",
+    Astro.props.class,
+  ]}
+>
+  <h2 class="h2">Ai</h2>
+  <ul class="flex items-center gap-6">
+    {
+      links.map((link) => {
+        return (
+          <li class="font-medium ">
+            <a href="#">{link.text}</a>
+          </li>
+        );
+      })
+    }
+  </ul>
+  <button
+    class="px-10 py-3 font-medium border-none rounded-lg bg-gradient-to-br from-primary to-secondary"
+    >Login</button
+  >
+</nav>
