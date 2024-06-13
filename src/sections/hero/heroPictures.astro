@@ -30,14 +30,18 @@ import Image from "astro/components/Image.astro";
         alt="A description of my image."
       />
     </div>
-    <div class="p-px rounded-2xl w-[180px] h-[280px] hidden xl:block">
+    <div
+      class="p-px rounded-2xl w-[180px] h-[280px] md:w-[200px] md:h-[300px] hidden xl:block"
+    >
       <Image
         src={hero4}
         class="object-cover h-full p-px rounded-[calc(1.5rem-1px)] bg-gradient-to-b from-green-500 to-black"
         alt="A description of my image."
       />
     </div>
-    <div class="p-px rounded-2xl w-[180px] h-[180px] hidden xl:block">
+    <div
+      class="p-px rounded-2xl w-[180px] h-[180px] md:w-[200px] md:h-[200px] hidden xl:block"
+    >
       <Image
         src={hero5}
         class="object-cover h-full p-px rounded-[calc(1.5rem-1px)] bg-gradient-to-b from-green-500 to-black"
