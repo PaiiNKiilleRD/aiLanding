@@ -4,9 +4,17 @@ const { class: classList } = Astro.props;
 
 import Navbar from "@/sections/navbar.astro";
 import Hero from "@/sections/hero.astro";
+
+import bg from "@/assets/bg.jpg";
+import Image from "astro/components/Image.astro";
 ---
 
 <Layout title="AI LANDING PAGE">
+  <Image
+    src={bg}
+    alt="A description of my image."
+    class="absolute object-cover h-screen"
+  />
   <Navbar class="px-12" />
   <Hero />
 </Layout>
