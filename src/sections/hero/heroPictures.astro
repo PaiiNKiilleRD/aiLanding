@@ -9,30 +9,40 @@ import Image from "astro/components/Image.astro";
 
 <article class:list={["w-full", Astro.props.class]}>
   <div class="flex items-center justify-center gap-6">
-    <Image
-      src={hero1}
-      class="w-[160px] h-[160px] lg:w-[250px] lg:h-[350px] object-cover border border-green-800 rounded-xl"
-      alt="A description of my image."
-    />
-    <Image
-      src={hero2}
-      class="w-[160px] h-[280px] lg:w-[250px] lg:h-[250px] object-cover border border-green-800 rounded-xl"
-      alt="A description of my image."
-    />
-    <Image
-      src={hero3}
-      class="w-[160px] h-[160px] lg:w-[250px] lg:h-[350px] object-cover border border-green-800 rounded-xl"
-      alt="A description of my image."
-    />
-    <Image
-      src={hero4}
-      class="w-[160px] h-[280px] lg:w-[250px] lg:h-[250px] object-cover border border-green-800 rounded-xl"
-      alt="A description of my image."
-    />
-    <Image
-      src={hero5}
-      class="w-[160px] h-[160px] lg:w-[250px] lg:h-[350px] object-cover border border-green-800 rounded-xl"
-      alt="A description of my image."
-    />
+    <div class="p-px rounded-2xl w-[180px] h-[180px] md:w-[200px] md:h-[200px]">
+      <Image
+        src={hero1}
+        class="object-cover p-px rounded-[calc(1.5rem-1px)] bg-gradient-to-b from-green-500 to-black"
+        alt="A description of my image."
+      />
+    </div>
+    <div class="p-px rounded-2xl w-[180px] h-[280px] md:w-[200px] md:h-[300px]">
+      <Image
+        src={hero2}
+        class="object-cover h-full p-px rounded-[calc(1.5rem-1px)] bg-gradient-to-b from-green-500 to-black"
+        alt="A description of my image."
+      />
+    </div>
+    <div class="p-px rounded-2xl w-[180px] h-[180px] md:w-[200px] md:h-[200px]">
+      <Image
+        src={hero3}
+        class="object-cover p-px rounded-[calc(1.5rem-1px)] bg-gradient-to-b from-green-500 to-black"
+        alt="A description of my image."
+      />
+    </div>
+    <div class="p-px rounded-2xl w-[180px] h-[280px] hidden xl:block">
+      <Image
+        src={hero4}
+        class="object-cover h-full p-px rounded-[calc(1.5rem-1px)] bg-gradient-to-b from-green-500 to-black"
+        alt="A description of my image."
+      />
+    </div>
+    <div class="p-px rounded-2xl w-[180px] h-[180px] hidden xl:block">
+      <Image
+        src={hero5}
+        class="object-cover h-full p-px rounded-[calc(1.5rem-1px)] bg-gradient-to-b from-green-500 to-black"
+        alt="A description of my image."
+      />
+    </div>
   </div>
 </article>
