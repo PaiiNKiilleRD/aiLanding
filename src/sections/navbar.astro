@@ -49,7 +49,12 @@ export const links = [
     </ul>
 
     <button id="menuBtn" class="z-10 block lg:hidden"
-      ><Icon name="tabler:menu-deep" size={48} class="" /></button
+      ><Icon
+        id="menuIcon"
+        name="tabler:menu-deep"
+        size={48}
+        class="transition-all duration-500 ease-in-out"
+      /></button
     >
   </div>
 </nav>
@@ -58,8 +63,19 @@ export const links = [
   import { isMenuOpen } from "@/stores.js";
 
   const menuBtn = document.getElementById("menuBtn") as HTMLElement;
+  const menuIcon = document.getElementById("menuIcon");
   menuBtn.addEventListener("click", () => {
     isMenuOpen.set(!isMenuOpen.value);
+
+    isMenuOpen.subscribe((open) => {
+      if (open) {
+        menuIcon?.classList.add("text-orange-500");
+        // menuBtn.classList.add("bg-black");
+      } else {
+        menuIcon?.classList.remove("text-orange-500");
+        // menuBtn.classList.remove("bg-black");
+      }
+    });
     //console.log(isMenuOpen.value);
   });
 </script>
