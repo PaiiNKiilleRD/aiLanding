@@ -1,0 +1,41 @@
+---
+import { links } from "./navbar.astro";
+---
+
+<div
+  id="bgSideMenu"
+  class="fixed transition-all z-[5] ease-in-out top-0 -right-[100%] w-full h-screen bg-black/80"
+>
+  <div
+    id="sideMenu"
+    class="w-[60%] z-[9] h-screen bg-green-500 top-0 right-0 absolute flex items-center justify-center"
+  >
+    <ul class="flex flex-col gap-y-10">
+      {
+        links.map((link) => {
+          return (
+            <li class="font-medium ">
+              <a href="#">{link.text}</a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</div>
+
+<script>
+  import { isMenuOpen } from "@/stores";
+
+  const bgSideMenu = document.getElementById("bgSideMenu") as HTMLElement;
+
+  isMenuOpen.subscribe((open) => {
+    if (open) {
+      bgSideMenu.classList.remove("-right-[100%]");
+      bgSideMenu.classList.add("right-[0%]");
+    } else {
+      bgSideMenu.classList.add("-right-[100%]");
+      bgSideMenu.classList.remove("right-[0%]");
+    }
+  });
+</script>
