@@ -1,3 +1,1 @@
-# AGREGAR COSAS
-
-# VER ACCESIBILIDAD?
+# Solo una landing
